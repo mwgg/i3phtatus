@@ -11,7 +11,7 @@ if ( isset($options["c"]) ) {
     $config_file = $options["c"];
 }
 else {
-    $config_file = getenv("HOME") . "/.i3/i3phtatus.php";
+    $config_file = getenv("HOME") . "/.i3/i3phtatus.conf.php";
 }
 
 if ( file_exists($config_file) ) {
