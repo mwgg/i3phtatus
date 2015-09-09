@@ -1,0 +1,13 @@
+{
+    "name": "mwgg/i3phtatus",
+    "description": "A dead simple extensible i3status replacement written in PHP",
+    "homepage": "https://github.com/mwgg/i3phtatus",
+    "license": "GPLv3",
+    "authors": [
+        {
+            "name": "mwgg",
+            "email": "m@mw.gg"
+        }
+    ],
+    "require": {}
+}
