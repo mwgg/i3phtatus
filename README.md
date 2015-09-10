@@ -1,6 +1,10 @@
 # i3phtatus
 i3phtatus is an easily extensible i3status replacement meant for i3bar, written in PHP.
 
+<p align="center">
+  <img alt="i3phtatus" src="https://i.imgur.com/6GGURq0.png" />
+</p>
+
 ##Usage:
 
 Replace your current "status_command" setting in ~/.i3/config with i3phtatus:
