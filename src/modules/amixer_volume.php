@@ -10,7 +10,7 @@
         elseif ( $module_options["mode"] === "bar" ) {
             $percent = str_replace("%", "", $percent);
             $bars = $percent * $module_options["width"] / 100;
-            $module_output = "-". str_pad("", $bars, "|") . str_pad("", $module_options["width"] - $bars, " ") ."-";
+            $module_output = "-". str_pad("", $bars, "|") . str_pad("", floor($module_options["width"]) - floor($bars), " ") ."-";
         }
         return array(
             "full_text" => $module_output
