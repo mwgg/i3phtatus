@@ -3,6 +3,7 @@
         "refresh" => 1000,
         "color_good" => "#00ff00",
         "color_bad" => "#ff0000",
+        "color_warn" => "#ff9500",
         "modules" => array(
 //          "cmus" => array(
 //              "module" => "cmus"
@@ -41,6 +42,16 @@
                 "module" => "load",
                 "mode" => 0,
                 "label" => "load: "
+            ),
+            "battery" => array(
+                "module" => "battery",
+                "mode" => "percent",
+                "label" => "BAT: "
+            ),
+            "battery_bar" => array(
+                "module" => "battery",
+                "mode" => "bar",
+                "width" => 5
             ),
             "clock" => array(
                 "module" => "clock",

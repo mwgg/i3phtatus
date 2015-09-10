@@ -17,7 +17,7 @@ By default, i3phtatus will expect the config file to be at `~/.i3/i3phtatus.conf
 
 ##Configuration
 
-Configuration is stored in a PHP array. There you can configure the refresh rate (in milliseconds before the information is updated), "good" and "bad" colors for modules requiring colored output, as well as individual modules options.
+Configuration is stored in a PHP array. There you can configure the refresh rate (in milliseconds before the information is updated), "good", "bad" and "warn" colors for modules requiring colored output, as well as individual modules options.
 
 Modules are displayed in the same order as they appear in the config. Unnecessary modules may simply be commented out or removed from the config file.
 
@@ -34,7 +34,9 @@ Modules are displayed in the same order as they appear in the config. Unnecessar
 )
 ```
 
-"Key" for a particular module may be anything, as long as they are all unique. Each module config section must have at least the "module" parameter, which corresponds to the function name of a particular module. Some modules require additional parameters.
+The example above will output `|VOL: 68%|-||||||    -|`
+
+"Key" for a particular module may be anything, as long as they are all unique. Each module config section must have at least the `module` parameter, which corresponds to the function name of a particular module. Some modules require additional parameters.
 
 Optional `label` parameter in the module configuration will prepend a label to the output.
 
@@ -51,7 +53,7 @@ function module_uname($module_options) {
 }
 ```
 
-All modules must return an array with at least a `full_text` element, containing the desired output. Should it be necessary to color the output, an element `color` should be added, containing a hex value. Standard "good" and "bad" colors are defined in the config file and may be referenced by adding the `$config` variable to the function scope:
+All modules must return an array with at least a `full_text` element, containing the desired output. Should it be necessary to color the output, an element `color` should be added, containing a hex value. Standard "good", "bad" and "warn" colors are defined in the config file and may be referenced by adding the `$config` variable to the function scope:
 
 ```php
 function module_awesome_stuff($module_options) {
