@@ -24,13 +24,14 @@ else {
 foreach (glob( dirname(__FILE__) . "/modules/*.php" ) as $module_file) { require_once($module_file); }
 
 $module_tmp = array();
-
+echo '{ "version": 1 }' . "\n";
+echo "[\n";
 while(true){
     $output = array();
     foreach ($config["modules"] as $module_name => $module_options) {
-        $output[] = call_user_func("module_".$module_name, $module_options);
+        $output[] = json_encode(call_user_func("module_".$module_options["module"], $module_options));
     }
-    echo implode($config["separator"], $output) . "\n";
+    echo "[". implode(",", $output) ."],\n";
     usleep($config["refresh"] * 1000);
 }
 

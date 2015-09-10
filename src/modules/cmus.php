@@ -16,10 +16,10 @@
     function module_cmus($module_options) {
         $module_output = "";
         $cmus_status = "";
-        $artist = "";
-        $title = "";
         $pos = "0:0";
         $dur = "0:0";
+        $artist = "";
+        $title = "";
         $cmus_exec = exec("cmus-remote -Q", $cmus_status);
         foreach($cmus_status as $line) {
             if (substr($line, 0, 8) == "position") {
@@ -38,6 +38,11 @@
                 $artist = substr($line, 11);
             }
         }
+        if ( !isset($status) ) {
+            return array(
+                "full_text" => "cmus n/a"
+            );
+        }
         if ( $status == "stopped" ) {
             $module_output = "◾ ";
         }
@@ -48,6 +53,8 @@
             $module_output = "▶ ";
         }
         $module_output .= "[". $pos ."/". $dur ."] ". $artist ." - ". $title;
-        return $module_output;
+        return array(
+            "full_text" => $module_output
+        );
     }
 ?>

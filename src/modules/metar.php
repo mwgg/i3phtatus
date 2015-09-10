@@ -13,6 +13,8 @@
                 $module_tmp["metar"]["metar"] = "METAR N/A";
             }
         }
-        return $module_tmp["metar"]["metar"];
+        return array(
+            "full_text" => $module_tmp["metar"]["metar"]
+        );
     }
 ?>

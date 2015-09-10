@@ -1,2 +1,4 @@
 # i3phtatus
-A dead simple extensible i3status replacement written in PHP
+<p align="center">
+  <img alt="Phtatus" src="https://i.imgur.com/NZ7qKDv.png" />
+</p>
