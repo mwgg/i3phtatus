@@ -61,8 +61,7 @@ Should a module require storing temporary data (such as last refresh time for mo
    global $module_tmp;
    $module_tmp["awesome_stuff"]["last_update"] = time();
    ...
-`
-``
+```
 
 ##Pronunciation guide
 
