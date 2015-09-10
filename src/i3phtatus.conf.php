@@ -7,11 +7,11 @@
 //          "cmus" => array(
 //              "module" => "cmus"
 //          ),
-            "metar" => array(
-                "module" => "metar",
-                "icao" => "UUWW",
-                "refresh" => "600"
-            ),
+//          "metar" => array(
+//              "module" => "metar",
+//              "icao" => "UUWW",
+//              "refresh" => "600"
+//          ),
 //          "uname" => array(
 //              "module" => "uname",
 //              "mode" => "r"

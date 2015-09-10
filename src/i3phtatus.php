@@ -1,12 +1,18 @@
 <?php
+
+$help  = "i3phtatus is a replacement for i3status and outputs data in JSON format, compatible with i3bar\n\n";
+$help .= "Options:\n";
+$help .= "-c <config_file>  Allows using a specified config file instead of the default ~/.i3/i3phtatus.conf.php\n";
+
 $shortopts  = "";
 $shortopts .= "h::"; // help
 $shortopts .= "c:"; // config
 
 $options = getopt($shortopts);
 
-$load = sys_getloadavg();
-
+if ( isset($options["h"]) ) {
+    die($help);
+}
 if ( isset($options["c"]) ) {
     $config_file = $options["c"];
 }
@@ -18,7 +24,7 @@ if ( file_exists($config_file) ) {
     require_once($config_file);
 }
 else {
-    die( sprintf("Config file \"%s\" not found!\n",$config_file) );
+    die( sprintf("Config file \"%s\" not found!\n\n%s",$config_file, $help) );
 }
 
 foreach (glob( dirname(__FILE__) . "/modules/*.php" ) as $module_file) { require_once($module_file); }
