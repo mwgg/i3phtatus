@@ -35,7 +35,11 @@ echo "[\n";
 while(true){
     $output = array();
     foreach ($config["modules"] as $module_name => $module_options) {
-        $output[] = json_encode(call_user_func("module_".$module_options["module"], $module_options));
+        $module_output = call_user_func("module_".$module_options["module"], $module_options);
+        if ( isset($module_options["label"]) ) {
+            $module_output["full_text"] = $module_options["label"] . $module_output["full_text"];
+        }
+        $output[] = json_encode($module_output);
     }
     echo "[". implode(",", $output) ."],\n";
     usleep($config["refresh"] * 1000);

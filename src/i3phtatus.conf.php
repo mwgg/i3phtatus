@@ -39,7 +39,8 @@
             ),
             "load" => array(
                 "module" => "load",
-                "mode" => 0
+                "mode" => 0,
+                "label" => "load: "
             ),
             "clock" => array(
                 "module" => "clock",
