@@ -24,7 +24,7 @@ Modules are displayed in the same order as they appear in the config. Unnecessar
 )
 ```
 
-Name for a particular module may be anything, as long as they are all unique. Each module config section must have at least the "module" parameter, which corresponds to the function name of a particular module. Some modules require additional parameters.
+"Key" for a particular module may be anything, as long as they are all unique. Each module config section must have at least the "module" parameter, which corresponds to the function name of a particular module. Some modules require additional parameters.
 
 ##Writing modules
 

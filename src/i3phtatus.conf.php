@@ -29,7 +29,13 @@
                 "interface" => "tun0"
             ),
             "amixer_volume" => array(
-                "module" => "amixer_volume"
+                "module" => "amixer_volume",
+                "mode" => "percent"
+            ),
+            "amixer_volume_bar" => array(
+                "module" => "amixer_volume",
+                "mode" => "bar",
+                "width" => 10
             ),
             "load" => array(
                 "module" => "load",
