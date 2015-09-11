@@ -1,7 +1,7 @@
 <?php
-    function module_uname($module_options) {
+    function module_uname($module_options)
+    {
         return array(
-            "full_text" => php_uname($module_options["mode"])
+            'full_text' => php_uname($module_options['mode']),
         );
     }
-?>
