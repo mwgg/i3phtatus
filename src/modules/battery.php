@@ -1,4 +1,5 @@
 <?php
+
     function module_battery($module_options)
     {
         global $config;

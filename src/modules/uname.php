@@ -1,4 +1,5 @@
 <?php
+
     function module_uname($module_options)
     {
         return array(

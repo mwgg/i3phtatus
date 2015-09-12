@@ -1,5 +1,6 @@
 <?php
 
+
     $config = array(
         'refresh' => 1000,
         'color_good' => '#00ff00',
@@ -43,7 +44,12 @@
             'load' => array(
                 'module' => 'load',
                 'mode' => 0,
-                'label' => 'load: ',
+                'label' => 'LOAD: ',
+            ),
+            'cpu_temp' => array(
+                'module' => 'cpu_temp',
+                'alert' => 90,
+                'label' => 'TEMP: ',
             ),
             'battery' => array(
                 'module' => 'battery',

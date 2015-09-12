@@ -1,4 +1,5 @@
 <?php
+
     function module_amixer_volume($module_options)
     {
         $module_output = '';

@@ -1,4 +1,5 @@
 <?php
+
     function module_ip($module_options)
     {
         global $config;

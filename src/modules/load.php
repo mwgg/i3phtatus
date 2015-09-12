@@ -1,4 +1,5 @@
 <?php
+
     /**
      * Returns average system load.
      * Mode 0 for avg over 1 min, Mode 1 for 5 min, Mode 2 for 15 min,

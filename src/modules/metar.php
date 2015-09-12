@@ -1,4 +1,5 @@
 <?php
+
     function module_metar($module_options)
     {
         global $module_tmp;

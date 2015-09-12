@@ -1,4 +1,5 @@
 <?php
+
     function module_cmus_sec2min($seconds)
     {
         $hours = floor($seconds / (60 * 60));
