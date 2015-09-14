@@ -1,5 +1,4 @@
 <?php
-
 $help = "i3phtatus is a replacement for i3status and outputs data in JSON format, compatible with i3bar\n\n";
 $help .= "Options:\n";
 $help .= "-c <config_file>  Allows using a specified config file instead of the default ~/.i3/i3phtatus.conf.php\n";
