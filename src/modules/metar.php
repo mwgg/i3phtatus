@@ -5,7 +5,7 @@
         global $module_tmp;
         if (!isset($module_tmp['metar'][$module_options['icao']]['updated']) ||
                 (time() - $module_tmp['metar'][$module_options['icao']]['updated']) > $module_options['refresh']) {
-            $url = 'http://weather.noaa.gov/pub/data/observations/metar/stations/'.strtoupper($module_options['icao']).'.TXT';
+            $url = 'http://tgftp.nws.noaa.gov/data/observations/metar/stations/'.strtoupper($module_options['icao']).'.TXT';
             $metar = file_get_contents($url);
             $module_tmp['metar'][$module_options['icao']]['updated'] = time();
             if ($metar !== false) {
