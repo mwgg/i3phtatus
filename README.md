@@ -5,7 +5,7 @@ i3phtatus is an easily extensible i3status replacement meant for i3bar, written 
   <img alt="i3phtatus" src="https://i.imgur.com/6GGURq0.png" />
 </p>
 
-##Usage
+## Usage
 
 Replace your current "status_command" setting in `~/.i3/config` with i3phtatus:
 
@@ -15,7 +15,7 @@ By default, i3phtatus will expect the config file to be at `~/.i3/i3phtatus.conf
 
 `status_command php /opt/i3phtatus/i3phtatus.php -c ~/my_i3phtatus.conf.php`
 
-##Configuration
+## Configuration
 
 Configuration is stored in a PHP array. There you can configure the refresh rate (in milliseconds before the information is updated), "good", "bad" and "warn" colors for modules requiring colored output, as well as individual modules options.
 
@@ -41,7 +41,7 @@ The example above will output `|VOL: 68%|-||||||&nbsp;&nbsp;&nbsp;&nbsp;-|`
 Optional `label` parameter in the module configuration will prepend a label to the output.
 
 
-##Writing modules
+## Writing modules
 
 Modules are PHP functions, their names must be prefixed with `module_` and they are automatically loaded from the *modules* subfolder. Each module function shall accept one argument, containing the module options, as specified in the config file.
 
@@ -74,7 +74,7 @@ Should a module require storing temporary data (such as last refresh time for mo
    ...
 ```
 
-##Pronunciation guide
+## Pronunciation guide
 
 <p align="center">
   <img alt="Phtatus" src="https://i.imgur.com/NZ7qKDv.png" />
